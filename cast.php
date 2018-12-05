@@ -4,7 +4,7 @@
 <?php
 $sougaku = 1234;
 $sougaku = $sougaku * 1.05;
-$seikyugaku = (int)$sougaku;
+$seikyugaku = $sougaku;
 print ("請求額は".$seikyugaku."円です");
 ?>
 </body>

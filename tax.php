@@ -3,7 +3,7 @@
 <body>
 <?php
 function tax($zeikomi) {
-    $zeinuki = $zeikomi / 1.05;
+    $zeinuki = $zeikomi / 1.08;
     return $zeinuki;
 }
 print (tax(105));
