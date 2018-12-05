@@ -4,6 +4,7 @@
 <?php
 $var_num="10";
 print ($var_num + 5 ."<br />");
+print ($var_num."5"."<br/>");
 print ($var_num + 5.5);
 ?>
 </body>
