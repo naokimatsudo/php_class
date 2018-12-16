@@ -2,7 +2,7 @@
 <head><title>ユーザー検索</title></head>
 <body>
 <h1>ユーザー検索</h1>
-<h3>キーワード</h3>
+<h3>登録されているユーザー名を入力してください、プロフィールページに遷移する事ができます</h3>
 <form action="user_result.php" method="post">
 <table border="1" cellspacing="0">
 <tr>
