@@ -24,9 +24,9 @@ while ($row=mysqli_fetch_array($res)) {
     print("<td>".$row["category"]."</td>");
 }
     print("</tr>");
-
 print("</table>");
-
+$row=mysqli_fetch_array($res);
+print("<td><a href= \"add_property_form.php?bid=".$id."\">資産追加</a></td>");
 ?>
 </body>
 </html> 

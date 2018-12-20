@@ -15,9 +15,9 @@
   while($row = $res->fetch_array()) {
     print("<tr>");
     for( $i = 0; $i < $res->field_count; $i++ ){
-      print( "<td>".$row[$i]."</td>" );
-      print("<td><a href= \"property_search.php?bid=".$row["id"]."\">資産一覧</a></td>");	
+      print( "<td>".$row[$i]."</td>" );	
     }
+    print("<td><a href= \"property_search.php?bid=".$row["id"]."\">資産一覧</a></td>");
     print("</tr>");
   }
 ?>
