@@ -2,6 +2,7 @@
 <head><title>ユーザーデータの追加</title></head>
 <body>
 <?php
+include('header.html');
 $u_name = $_POST['u_name'];
 $debt = $_POST['debt'];
 if ($u_name == ""){

@@ -1,21 +1,17 @@
 <html>
-<head><title>データの追加</title></head>
+<head><title>管理場所データの追加</title></head>
 <body>
 <?php
-$p_name = $_POST['p_name'];
-$kana = $_POST['kana'];
-$kosuu = $_POST['kosuu'];
-$money = $_POST['money'];
-$p_picture = $_POST['p_picture'];
-$category = $_POST['category'];
+$m_name = $_POST['m_name'];
+$m_picture = $_POST['m_picture'];
+$des = $_POST['description'];
 //printf("%d",$u_id");
 //print("$_GET['u_id']");
 //if(isset($_GET['u_id'])){
 $u_id = $_POST['u_id'];
 //}
 //print("$u_id");
-$m_id = $_POST['m_id'];
-if ($p_name == ""){
+if ($m_name == ""){
     exit ("タイトルが入力されていません");
 }
 
@@ -27,7 +23,7 @@ if (!$conn = mysqli_connect($host, "s1611555", "s1611555new", "s1611555")){
 mysqli_select_db($conn, "kisop");
 mysqli_set_charset($conn, "utf8");
     
-$sql = "INSERT INTO property(p_name, kana, kosuu, money, p_picture, category, u_id, m_id) VALUES('$p_name', '$kana', '$kosuu', '$money', '$p_picture', '$category', '$u_id', '$m_id')";
+$sql = "INSERT INTO management(m_name, m_picture, description, u_id) VALUES('$m_name', '$m_picture', '$des', '$u_id')";
 
 mysqli_query($conn, $sql)
    or die("登録できませんでした");

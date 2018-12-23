@@ -1,6 +1,7 @@
 <html>
 <head><title>資産追加フォーム</title></head>
 <body>
+<?php include('header.html'); ?>
 あなたの資産データを追加します。
 <form action="property_add.php" method="post">
 <table border="1">
@@ -28,10 +29,11 @@
 <td>カテゴリー</td>
 <td><input type="text" name="category"></td>
 </tr>
-<tr>
-<td>ユーザーid</td>
-<td><input type="hidden" name="u_id" value=<?php print( $_GET['bid'] ); ?>></td>
-</tr>
+<!--<tr>-->
+<!--<td>ユーザーid</td>-->
+<!--<td>-->
+<input type="hidden" name="u_id" value=<?php print( $_GET['bid'] ); ?>><!--</td>-->
+<!--</tr>-->
 <tr>
 <td>管理場所id</td>
 <td><input type="text" name="m_id"></td>

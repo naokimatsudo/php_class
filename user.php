@@ -1,6 +1,7 @@
 <html>
 <head><title>ユーザー情報</title></head>
 <body>
+<?php include ('header.html'); ?>
 <table border="1">
 <?php
   $mysqli = new mysqli("localhost", "s1611555", "s1611555new", "s1611555");
