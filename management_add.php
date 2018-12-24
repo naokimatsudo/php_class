@@ -3,7 +3,7 @@
 <body>
 <?php
 $m_name = $_POST['m_name'];
-$m_picture = $_POST['m_picture'];
+//$m_picture = $_POST['m_picture'];
 $des = $_POST['description'];
 //printf("%d",$u_id");
 //print("$_GET['u_id']");
@@ -12,7 +12,11 @@ $u_id = $_POST['u_id'];
 //}
 //print("$u_id");
 if ($m_name == ""){
-    exit ("タイトルが入力されていません");
+    exit ("管理場所名が入力されていません");
+}
+
+if ($des == ""){
+    exit ("説明が入力されていません");
 }
 
 $host = "localhost";
@@ -23,7 +27,7 @@ if (!$conn = mysqli_connect($host, "s1611555", "s1611555new", "s1611555")){
 mysqli_select_db($conn, "kisop");
 mysqli_set_charset($conn, "utf8");
     
-$sql = "INSERT INTO management(m_name, m_picture, description, u_id) VALUES('$m_name', '$m_picture', '$des', '$u_id')";
+$sql = "INSERT INTO management(m_name, description, u_id) VALUES('$m_name', '$des', '$u_id')";
 
 mysqli_query($conn, $sql)
    or die("登録できませんでした");

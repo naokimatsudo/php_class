@@ -3,6 +3,13 @@
 <body>
 <?php include('header.html'); ?>
 あなたの資産データを追加します。
+管理場所IDが分からない場合は
+<?php
+print("<a href=\"management_search.php?bid=".$_GET['bid']."\">ここ</a>");
+print("を参照して下さい。<br />");
+print("金額は個数を考慮した金額を入力してください
+。");
+?>
 <form action="property_add.php" method="post">
 <table border="1">
 <tr>
@@ -20,10 +27,6 @@
 <tr>
 <td>金額</td>
 <td><input type="text" name="money"></td>
-</tr>
-<tr>
-<td>写真</td>
-<td><input type="text" name="p_picture"></td>
 </tr>
 <tr>
 <td>カテゴリー</td>

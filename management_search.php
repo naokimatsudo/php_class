@@ -18,10 +18,12 @@ $res=mysqli_query($conn, $sql);
 $row_cnt = $res->num_rows;
 if($row_cnt >= 1){
 print("<h1>あなたの管理場所は以下の通りです</h1>");
+print("<p>管理場所IDは資産を追加する際に必要になるので覚えておいて下さい。");
 print("<table border=\"1\">");
-print("<tr><td>管理場所</td><td>説明</td><td></td></tr>");
+print("<tr><td>管理場所ID</td><td>管理場所</td><td>説明</td><td>削除</td></tr>");
 while ($row=mysqli_fetch_array($res)) {
     print("<tr>");
+    print("<td>".$row["m_id"]."</td>");
     print("<td>".$row["m_name"]."</td>");
     print("<td>".$row["description"]."</td>");
     print("<td><a href= \"management_delete.php?bid=".$row["m_id"]."\">削除</a></td>");

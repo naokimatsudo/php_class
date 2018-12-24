@@ -3,6 +3,7 @@
 <body>
 <?php include('header.html'); ?>
 あなたの管理場所データを追加します。
+説明にはその管理場所についての説明を書いて下さい。
 <form action="management_add.php" method="post">
 <table border="1">
 <tr>
@@ -12,10 +13,6 @@
 <tr>
 <td>説明</td>
 <td><textarea rows="5" cols="18" name="description"></textarea></td>
-</tr>
-<tr>
-<td>写真</td>
-<td><input type="text" name="m_picture"></td>
 </tr>
 <!--<tr>-->
 <!--<td>ユーザーid</td>-->
